@@ -11,6 +11,11 @@ export class RolesController {
     return this.rolesService.createRole(dto);
   }
 
+  @Get("/")
+  getAllRoles() {
+    return this.rolesService.getAllRoles();
+  }
+
   @Get("/:value")
   getByValue(@Param("value") value: string) {
     return this.rolesService.getRoleByValue(value);
